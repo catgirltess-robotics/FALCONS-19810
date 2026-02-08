@@ -1,0 +1,180 @@
+/* ========================= */
+/* Global Variables (Colors) */
+/* ========================= */
+:root {
+    --black: #000000;
+    --royal-blue: #0033a0;
+    --royal-blue-light: #1a4fd8;
+    --gold: #eee8aa; /* Pale Goldenrod */
+    --text-light: #ffffff;
+    --text-dark: #111111;
+}
+
+/* ========================= */
+/* Global Page Styling */
+/* ========================= */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Montserrat', sans-serif;
+    background-color: var(--black);
+    color: var(--text-light);
+    display: flex;
+}
+
+/* ========================= */
+/* Sidebar Navigation */
+/* ========================= */
+#sidebar {
+    width: 260px;
+    background-color: var(--royal-blue);
+    padding: 20px;
+    position: fixed;
+    height: 100vh;
+    transition: transform 0.3s ease;
+}
+
+/* Sidebar collapsed state */
+#sidebar.collapsed {
+    transform: translateX(-100%);
+}
+
+/* Sidebar title */
+.sidebar-title {
+    margin: 20px 0;
+    font-size: 1.4rem;
+}
+
+/* Menu toggle button */
+#menu-toggle {
+    background: none;
+    border: none;
+    color: var(--text-light);
+    font-size: 1.5rem;
+    cursor: pointer;
+}
+
+/* Navigation links */
+.nav-links {
+    list-style: none;
+    margin-top: 30px;
+}
+
+.nav-links li {
+    margin: 15px 0;
+}
+
+.nav-links a {
+    color: var(--text-light);
+    text-decoration: none;
+    font-weight: 500;
+}
+
+.nav-links a:hover {
+    color: var(--gold);
+}
+
+/* ========================= */
+/* Main Content Area */
+/* ========================= */
+#content {
+    margin-left: 260px;
+    padding: 40px;
+    width: 100%;
+    transition: margin-left 0.3s ease;
+}
+
+/* Adjust content when sidebar is collapsed */
+#content.expanded {
+    margin-left: 0;
+}
+
+/* ========================= */
+/* Hero Section */
+/* ========================= */
+.hero {
+    text-align: center;
+    margin-bottom: 80px;
+}
+
+.hero h1 {
+    font-size: 4rem;
+    color: var(--gold);
+}
+
+.tagline {
+    font-size: 1.4rem;
+    margin: 15px 0 30px;
+}
+
+/* ========================= */
+/* Content Sections */
+/* ========================= */
+.content-section {
+    margin-bottom: 80px;
+}
+
+.content-section h2 {
+    color: var(--gold);
+    margin-bottom: 15px;
+}
+
+.alt-background {
+    background-color: #111;
+    padding: 30px;
+    border-radius: 8px;
+}
+
+/* ========================= */
+/* Image Placeholders */
+/* ========================= */
+.image-placeholder {
+    margin-top: 20px;
+    height: 220px;
+    border: 2px dashed var(--gold);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--gold);
+    text-align: center;
+}
+
+.hero-image {
+    height: 300px;
+}
+
+/* ========================= */
+/* Buttons */
+/* ========================= */
+.button-group {
+    display: flex;
+    gap: 15px;
+    flex-wrap: wrap;
+}
+
+.link-button {
+    padding: 12px 20px;
+    background-color: var(--royal-blue-light);
+    color: var(--text-light);
+    text-decoration: none;
+    border-radius: 5px;
+}
+
+.link-button:hover {
+    background-color: var(--gold);
+    color: var(--text-dark);
+}
+
+/* ========================= */
+/* Footer */
+/* ========================= */
+footer {
+    margin-top: 100px;
+    text-align: center;
+    font-size: 0.9rem;
+    opacity: 0.7;
+}
